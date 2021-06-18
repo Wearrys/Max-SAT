@@ -1,4 +1,4 @@
-% Max-SAT Based Solver for NP-complete Problems
+# Max-SAT Based Solver for NP-complete Problems
 
 This is in requirement of PKU Course : *Algorithm design and analysis*. 
 
