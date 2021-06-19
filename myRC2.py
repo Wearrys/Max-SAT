@@ -66,7 +66,6 @@ class RC2:
 
     def delete(self):
         if self.oracle:
-            # TODO: What the fuck do they originally write? :416
             self.oracle.delete()
             self.oracle = None
 
@@ -151,12 +150,6 @@ class RC2:
             t, b = self.update_sum(l)
             if b < len(t.rhs):
                 lnew = -t.rhs[b]
-                # TODO: WTF does this line of codes means?
-                '''
-                if lnew in self.garbage:
-                    self.garbage.remove(lnew)
-                    self.wght[lnew] = 0
-                '''
                 if lnew not in self.wght:
                     self.set_bound(t, b)
                 else:
