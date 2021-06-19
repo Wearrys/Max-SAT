@@ -25,7 +25,7 @@ A partial weighted Max-SAT problem is a generalization of the Max-Sat problem. C
 
 The solver `myRC2.py` is a simplified core-guided Max-SAT solver based on existing RC2 code. It solves the Max-SAT problems of the partial weighted CNF form.
 
-- It uses a **ITotalizer** to create inequalities in $SAT$.
+- It uses a **ITotalizer** to create inequalities in SAT.
 
 - It is based on a SAT solver which could returns an unsatisfiable core(a set of clauses can not be satisfied simultaneously). It then create a sat equation which releases the constraints so that at least one of these clauses could be satisfied. 
 
@@ -38,21 +38,46 @@ To run it, the input should begin with a line indicates the model(`INDEPENDENT-S
 
 - TSP
 
-  Input {n} at first line denote number of nodes
-  then input adjacent matrix of size {n * n}
+  Input `n` at first line denote number of nodes
+  then input adjacent matrix of size `n*n`
+
+  ```
+  TSP
+  3
+  0 2 2 
+  3 0 4 
+  2 5 0 
+  ```
 
 - IND-SET/DOM-SET/CHROM-NUMBER
 
-  Input {n, m} at first line denote number of nodes and edges
-  then input one edges at each following line with {u, v} denoting edge (u, v)
+  Input `n m` at first line denote number of nodes and edges
+  then input one edges at each following line with `u v` denote edge (u, v)
+
+  ```
+  INDEPENDENT-SET
+  4 5
+  0 1
+  0 2
+  0 3
+  1 2
+  2 3
+  ```
 
 - 01-KNAPSACK
 
-  Input {n, W} at first line denote number and capacity of the knapsack
-  at the second line input wei[] of size n denotes weights of the objects
-  at the third line input val[] of size n denotes values of the objects
+  Input `n W` at first line denote number and capacity of the knapsack
+  at the second line input `wei[]` of size `n` denote weights of the objects
+  at the third line input `val[]` of size `n` denotes values of the objects
+  
+  ```
+  01-KNAPSACK
+  3 5
+  1 5 3 
+  2 1 3 
+  ```
 
-Note that the vertex number in graph should begin with $0$.
+Note that the vertex number in graph **should begin with 0**.
 
 ## Bruteforce Solver
 
@@ -61,6 +86,10 @@ The code in `BFSolver.py` contains the brute force code to verify the algorithm'
 ## Data Generator and Correctness Verifier
 
 The code `myGenerator.py` generates small data and `checker.py` runs them in `mySolver.py` and `BFSolver.py`, verifying the correctness by checking the answers.
+
+## Efficiency Tester
+
+The code `myGenerator.py` randomly generates data and `test.py` runs them in `mySolver.py` to test the efficiency of the algorithm in randomly generated data.
 
 ## References
 
