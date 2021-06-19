@@ -11,6 +11,10 @@ This package includes two parts:
 
 You should install `pysat` before running the code.
 
+```bash
+pip3 install pysat
+```
+
 ## Solver
 
 ### Definition
@@ -34,19 +38,19 @@ To run it, the input should begin with a line indicates the model(`INDEPENDENT-S
 
 - TSP
 
-  Input $n$ at first line denote number of nodes
-  then input adjacent matrix of size $n \times n$
+  Input {n} at first line denote number of nodes
+  then input adjacent matrix of size {n * n}
 
 - IND-SET/DOM-SET/CHROM-NUMBER
 
-  Input $n\,\,m$ at first line denote number of nodes and edges
-  then input one edges at each following line with $u\,\,v$ denote edge $(u, v)$
+  Input {n, m} at first line denote number of nodes and edges
+  then input one edges at each following line with {u, v} denoting edge (u, v)
 
 - 01-KNAPSACK
 
-  Input $n\,\,W$ at first line denote number and capacity of the knapsack
-  at the second line input $\{wei_i\}$ denote weights of the objects
-  at the third line input $\{val_i\}$ denotes values of the objects
+  Input {n, W} at first line denote number and capacity of the knapsack
+  at the second line input wei[] of size n denotes weights of the objects
+  at the third line input val[] of size n denotes values of the objects
 
 Note that the vertex number in graph should begin with $0$.
 
